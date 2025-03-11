@@ -21,7 +21,7 @@
                         <div class="col-6">
                             <a class="navbar-brand text-white">Bool Factory</a>
                         </div>
-                        <div class="col-6-lg col-2 d-flex justify-content-end ms-auto">
+                        <div class="col-lg-6 col-2 d-flex justify-content-end ms-auto">
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                                 aria-expanded="false" aria-label="Toggle navigation">
@@ -56,25 +56,25 @@
                 <h2 class="mb-3">Richiesta Preventivo</h2>
                 <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo</p>
 
-                <form id="validationForm">
+                <form id="validation-Form">
                     <div class="mb-3">
-                        <label for="nameInput" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nameInput" required>
+                        <label for="name-Input" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name-Input" required>
                         <div class="invalid-feedback">Inserisci il Nome</div>
                     </div>
                     <div class="mb-3">
-                        <label for="surnameInput" class="form-label">Cognome</label>
-                        <input type="text" class="form-control" id="surnameInput" required>
+                        <label for="surname-Input" class="form-label">Cognome</label>
+                        <input type="text" class="form-control" id="surname-Input" required>
                         <div class="invalid-feedback">Inserisci il Cognome</div>
                     </div>
                     <div class="mb-3">
-                        <label for="emailInput" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="emailInput" required>
+                        <label for="email-Input" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email-Input" required>
                         <div class="invalid-feedback">Email non valida</div>
                     </div>
                     <div class="mb-3">
-                        <label for="selectWork" class="form-label">Tipo di Lavoro</label>
-                        <select class="form-select" id="selectWork" required>
+                        <label for="select-Work" class="form-label">Tipo di Lavoro</label>
+                        <select class="form-select" id="select-Work" required>
                             <option value="" disabled selected>Seleziona il tipo di lavoro</option>
                             <option value="backendDevelopment">Backend Development</option>
                             <option value="frontendDevelopment">Frontend Development</option>
@@ -83,33 +83,33 @@
                         <div class="invalid-feedback">Seleziona un tipo di lavoro</div>
                     </div>
                     <div class="mb-3">
-                        <label for="textareaInput" class="form-label">Informazioni Aggiuntive</label>
+                        <label for="textarea-Input" class="form-label">Informazioni Aggiuntive</label>
                         <textarea class="form-control" placeholder="Inserisci dettagli aggiuntivi qui..."
-                            id="textareaInput" style="height: 100px"></textarea>
+                            id="textarea-Input" style="height: 100px"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="couponInput" class="form-label">Codice Promozionale (opzionale)</label>
-                        <input type="text" class="form-control" id="couponInput">
+                        <label for="coupon-Input" class="form-label">Codice Promozionale (opzionale)</label>
+                        <input type="text" class="form-control" id="coupon-Input">
                     </div>
                     <div class="form-check mb-5">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                        <label class="form-check-label" for="flexCheckDefault">Accetto le Privacy Policy</label>
+                        <input class="form-check-input" type="checkbox" value="" id="check-privacy" required>
+                        <label class="form-check-label" for="check-privacy">Accetto le Privacy Policy</label>
                         <div class="invalid-feedback">Devi accettare le Privacy Policy</div>
                     </div>
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-lg-6 text-center">
-                                <button class="btn btn-primary mb-3" id="buttonPreventivo" type="submit">Calcola
+                                <button class="btn btn-primary mb-3" id="button-Preventivo" type="submit">Calcola
                                     Preventivo</button>
                             </div>
                             <div class="col-12 col-lg-6 text-center">
                                 <h6 class="mb-auto">Prezzo Finale</h6>
-                                <p class="mb-2" id="result"></p>
+                                <p class="mb-2" id="result-price"></p>
                             </div>
                         </div>
                     </div>
-                    <div id="scontoOttenuto" class="col-12 mb-3"></div>
-                    <p id="campiError" class="alert alert-danger text-center d-none">Errore compilazione campi</p>
+                    <div id="sconto-Ottenuto" class="col-12 mb-3"></div>
+                    <p id="campi-Error" class="alert alert-danger text-center d-none">Errore compilazione campi</p>
                 </form>
             </div>
 
@@ -118,7 +118,7 @@
                 <div class="d-flex justify-content-lg-end justify-content-center">
                     <div class="card">
                         <img src="img/backend.png" class="card-img-top" alt="immagine grigia"
-                            style="width: 300px; height:200px; object-fit: cover"> <!--creo uno style qua per l'immagine, da valutare se lasciarla o meno-->
+                            style="width: 300px; height:200px; object-fit: cover"> <!--creo uno style qua per l'immagine, da valutare se lasciarla o meno -->
                         <div class="card-body">
                             <h5 class="card-title">I nostri contatti</h5>
                             <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
