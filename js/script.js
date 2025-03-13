@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const couponInput = document.getElementById("coupon-Input");
     const checkPrivacy = document.getElementById("check-privacy");
     const resultPrice = document.getElementById("result-price");
-    const campiError = document.getElementById("campi-Error");
     const scontoOttenuto = document.getElementById("sconto-Ottenuto");
 
 
@@ -53,13 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const codicePromo = couponInput.value.trim();
         const accettatoPrivacy = checkPrivacy.checked; //se selezionato mi da true
 
+
         //dopo che ho recuperato i valori cosa posso fare?
         //prima posso calcolarmi il prezzo base
-        
-        const prezzoBase = prezzoLavoro [lavoro] * oraLavoro;
 
-        //ora posso aggiungere la condizione se l'utente inserisce 
-        //il codice sconto, devo controllare se viene inserito corretamente
+        const prezzoBase = prezzoLavoro[lavoro] * oraLavoro;
+
+        //ora posso aggiungere la condizione se l'utente inserisce il codice sconto 
+        // devo controllare se viene inserito corretamente
         //aggiungo il metodo includes per poter verificare se questo codice è inserito nell'array (true o false)
         // se non viene inserito o non viene inserito correttamente allora
         // il prezzofinale sara uguale al prezzo base
@@ -69,17 +69,17 @@ document.addEventListener("DOMContentLoaded", function () {
         scontoOttenuto.classList.remove("text-success", "text-danger", "fw-bold"); //inserisco remove per rimuovere lo stile aggiunto in precendenza
 
 
-        if (codicePromo && codiciSconto.includes(codicePromo))  { //includes sta a if (codicePromo ==="codicesconto")
-            sconto = prezzoBase * 0.25; 
+        if (codicePromo && codiciSconto.includes(codicePromo)) { //includes sta a if (codicePromo ==="codicesconto")
+            sconto = prezzoBase * 0.25;
             //stampiamo un messaggio che dice 
             scontoOttenuto.innerText = `Codice sconto valido`;
-            scontoOttenuto.classList.add('text-success','fw-bold');
-            
-           
-        }  else if (codicePromo) {
+            scontoOttenuto.classList.add('text-success', 'fw-bold');
+
+
+        } else if (codicePromo) {
             //stampiamo il messaggio che il codice non è valido
             scontoOttenuto.innerText = `Codice sconto non valido`;
-            scontoOttenuto.classList.add('text-danger','fw-bold');
+            scontoOttenuto.classList.add('text-danger', 'fw-bold');
 
         }
         else {
@@ -91,8 +91,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // ora dopo aver calcolato lo sconto calcoliamo il prezzo finale con:
         let prezzoFinale = prezzoBase - sconto;
         resultPrice.innerText = `${prezzoFinale.toFixed(2)}€`;
-        
-    
+
+
 
 
 
