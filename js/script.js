@@ -58,8 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const prezzoBase = prezzoLavoro[lavoro] * oraLavoro;
 
-        //ora posso aggiungere la condizione se l'utente inserisce il codice sconto 
-        // devo controllare se viene inserito corretamente
+        //ora posso aggiungere la condizione se l'utente inserisce il codice sconto etc
         //aggiungo il metodo includes per poter verificare se questo codice è inserito nell'array (true o false)
         // se non viene inserito o non viene inserito correttamente allora
         // il prezzofinale sara uguale al prezzo base
