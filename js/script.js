@@ -65,15 +65,21 @@ document.addEventListener("DOMContentLoaded", function () {
         // il prezzofinale sara uguale al prezzo base
 
         let sconto = 0;
-        if (codicePromo && codiciSconto.includes(codicePromo))  {
+
+        scontoOttenuto.classList.remove("text-success", "text-danger", "fw-bold"); //inserisco remove per rimuovere lo stile aggiunto in precendenza
+
+
+        if (codicePromo && codiciSconto.includes(codicePromo))  { //includes sta a if (codicePromo ==="codicesconto")
             sconto = prezzoBase * 0.25; 
             //stampiamo un messaggio che dice 
             scontoOttenuto.innerText = `Codice sconto valido`;
+            scontoOttenuto.classList.add('text-success','fw-bold');
             
            
         }  else if (codicePromo) {
             //stampiamo il messaggio che il codice non è valido
             scontoOttenuto.innerText = `Codice sconto non valido`;
+            scontoOttenuto.classList.add('text-danger','fw-bold');
 
         }
         else {
@@ -84,9 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // ora dopo aver calcolato lo sconto calcoliamo il prezzo finale con:
         let prezzoFinale = prezzoBase - sconto;
-        console.log(prezzoFinale);
-        resultPrice.innerText = `${prezzoFinale.toFixed(2)}`;
-        console.log(prezzoFinale);
+        resultPrice.innerText = `${prezzoFinale.toFixed(2)}€`;
         
     
 
