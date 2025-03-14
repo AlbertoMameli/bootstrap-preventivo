@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
     // creo un oggetto con i prezzi valori dei lavori 
     const prezzoLavoro = {
         backendDevelopment: 20.50,
@@ -50,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const emailForm = emailInput.value.trim();
         const lavoro = selectWork.value;
         const codicePromo = couponInput.value.trim();
-        const accettatoPrivacy = checkPrivacy.checked; //se selezionato mi da true
+
 
 
         //dopo che ho recuperato i valori cosa posso fare?
@@ -68,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scontoOttenuto.classList.remove("text-success", "text-danger", "fw-bold"); //inserisco remove per rimuovere lo stile aggiunto in precendenza
 
 
-        if (codicePromo && codiciSconto.includes(codicePromo)) { //includes sta a if (codicePromo ==="codicesconto")
+        if (codicePromo && codiciSconto.includes(codicePromo)) { //includes sta a if (codicePromo ==="codicesconto"||...)
             sconto = prezzoBase * 0.25;
             //stampiamo un messaggio che dice 
             scontoOttenuto.innerText = `Codice sconto valido`;
@@ -89,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // ora dopo aver calcolato lo sconto calcoliamo il prezzo finale con:
         let prezzoFinale = prezzoBase - sconto;
-        resultPrice.innerText = `${prezzoFinale.toFixed(2)}€`;
-
+        let prezzoFinaleBold = prezzoFinale.toFixed(2).split('.') // split mi separa la cifra in due array 
+        resultPrice.innerHTML = `<span style="font-size: 1.5em; font-weight: bold;">€ ${prezzoFinaleBold[0]}</span>.${prezzoFinaleBold[1]}`;
 
 
 
