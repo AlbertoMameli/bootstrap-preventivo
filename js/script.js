@@ -17,7 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultPrice = document.getElementById("result-price");
     const scontoOttenuto = document.getElementById("sconto-Ottenuto");
 
+    //parte bonus
+    
 
+    const workBonus = document.getElementById("select-worker");
+    const services = [
+           { workType: "backend", name: "Backend Development", prezzo: 20.50 },
+          { workType: "frontend", name: "Frontend Development", prezzo: 15.30 },
+          { workType: "analysis", name: "Project Analysis", prezzo: 33.60 }
+        ];
+        for (let i = 0; i < services.length; i++) {
+            let key = services[i];
+            let option = document.createElement("option");
+            option.value = key.workType;
+            option.textContent = key.name;
+            workBonus.appendChild(option)
+        }
+
+        //fine parte bonus
 
     // creo un oggetto con i prezzi valori dei lavori 
     const prezzoLavoro = {
