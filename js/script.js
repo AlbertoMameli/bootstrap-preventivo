@@ -17,24 +17,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultPrice = document.getElementById("result-price");
     const scontoOttenuto = document.getElementById("sconto-Ottenuto");
 
-    //parte bonus
-    
-
-    const workBonus = document.getElementById("select-worker");
-    const services = [
-           { workType: "backend", name: "Backend Development", prezzo: 20.50 },
-          { workType: "frontend", name: "Frontend Development", prezzo: 15.30 },
-          { workType: "analysis", name: "Project Analysis", prezzo: 33.60 }
-        ];
-        for (let i = 0; i < services.length; i++) {
-            let key = services[i];
-            let option = document.createElement("option");
-            option.value = key.workType;
-            option.textContent = key.name;
-            workBonus.appendChild(option)
-        }
-
-        //fine parte bonus
+    //inizio parte bonus
+    /*
+     const workBonus = document.getElementById("select-worker");
+ 
+     //creao array di oggetti 
+     const services = [
+     //aggiungere option non selezionabile (disabled selected) 
+         { workType: "backendDevelopment", name: "Backend Development", prezzo: 20.50 },
+         { workType: "frontendDevelopment", name: "Frontend Development", prezzo: 15.30 },
+         { workType: "projectAnalysis", name: "Project Analysis", prezzo: 33.60 }
+     ];
+ 
+     // utilizzo il ciclo for per aggiungere option al select
+      for (let i = 0; i < services.length; i++) {
+         let key = services[i];
+         let option = document.createElement("option");
+         option.value = key.workType;
+         option.textContent = key.name;
+         workBonus.appendChild(option)
+     }
+ 
+  */
+ 
 
     // creo un oggetto con i prezzi valori dei lavori 
     const prezzoLavoro = {
@@ -45,13 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
     //creo un array con i codici sconto e creo una costante con le ore di lavoro da svolgere 
     const codiciSconto = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
     const oraLavoro = 10;
 
 
 
-    //creo una function non anonima per rendere più pulito il codice 
+    //creo una function 'non anonima' per rendere più pulito il codice 
 
     validationForm.addEventListener("submit", gestisciForm);
 
@@ -60,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
 
-        // Prelevo i valori dagli input
+        // Prelevo i valori dagli inputs
         const nome = nameInput.value.trim();
         const cognome = surnameInput.value.trim();
         const emailForm = emailInput.value.trim();
@@ -97,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             scontoOttenuto.classList.add('text-danger', 'fw-bold');
 
         }
+
         else {
             scontoOttenuto.innerText = "";
 
@@ -110,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
     }
 
 
 })
+
