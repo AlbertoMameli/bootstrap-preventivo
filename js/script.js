@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const nome = nameInput.value.trim();
         const cognome = surnameInput.value.trim();
         const emailForm = emailInput.value.trim();
-        const lavoro = selectWork.value;
+        const lavoro = selectWork.value; 
         const codicePromo = couponInput.value.trim();
 
 
